@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-10-1 14:59:15 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping package="soft.chess.domain">
+    <class name="GameRecord">
+        <id name="id" type="java.lang.Long">
+			<column name="ID" />
+			<generator class="increment" />
+		</id>
+		<property name="winner_id" type="long">
+            <column name="WINNER_ID" />
+        </property>
+        <property name="loser_id" type="long">
+            <column name="LOSER_ID" />
+        </property>
+        <property name="gametime" type="long">
+            <column name="GAMETIME" />
+        </property>
+        <property name="endtime" type="long">
+            <column name="ENDTIME" />
+        </property>
+        <property name="begintime" type="long">
+            <column name="BEGINTIME" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,16 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="userDao" class="com.cqupt.dao.UserDaoImpl" parent="baseDao">
+	</bean>
+	<bean id="userService" class="com.cqupt.service.UserServiceImpl">
+		<property name="userDao" ref="userDao"></property>	
+	</bean>
+	<bean id="faceDao" class="com.cqupt.dao.FaceDaoImpl" parent="baseDao">
+	</bean>
+	<bean id="faceService" class="com.cqupt.service.FaceServiceImpl">
+		<property name="faceDao" ref="faceDao"></property>	
+	</bean>
+</beans>
